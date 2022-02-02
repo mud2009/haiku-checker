@@ -6,7 +6,11 @@ export default class Haiku {
   }
 
   isThreeLines() {
-    return "";
+    if (this.text.split("\n").length === 3) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
 // 'An ocean voyage. As waves break over the bow. The sea welcomes me.' -> split into sections -> check each section -> if all sections are true then it's a haiku
@@ -25,3 +29,4 @@ export default class Haiku {
 // As waves break...
 // "
 // \n
+// npm install babel-jest
