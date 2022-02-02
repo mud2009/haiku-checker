@@ -4,6 +4,10 @@ export default class Haiku {
   constructor(text) {
     this.text = text;
   }
+
+  isThreeLines() {
+    return "";
+  }
 }
 // 'An ocean voyage. As waves break over the bow. The sea welcomes me.' -> split into sections -> check each section -> if all sections are true then it's a haiku
 
