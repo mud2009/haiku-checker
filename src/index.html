@@ -4,6 +4,15 @@
   <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-  
+  <div class="container">
+    <form>
+      <div class="form-group">
+        <label for="haiku">Enter your Haiku</label>
+        <textarea name="haiku" id="haiku"class="form-control"></textarea> 
+      </div>
+      <button type="submit" class="btn btn-danger">Check Haiku</button>
+    </form>
+    <div id="result"></div>
+  </div>
 </body>
 </html>
