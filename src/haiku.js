@@ -1,4 +1,4 @@
-//import {syllable} from 'syllable';
+// const syllable = require('syllable');
 
 export default class Haiku {
   constructor(text) {
