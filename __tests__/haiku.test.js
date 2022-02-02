@@ -18,6 +18,18 @@ describe ('Haiku.isThreeLines', () => {
   });
 });
 
+describe ('Haiku.isHaiku', () => {
+  let haiku;
+
+  beforeEach(() => {
+    haiku = new Haiku("An ocean voyage\nAs waves break over the bow\nThe sea welcomes me.")
+  });
+
+  test('it should return true if the text is a haiku', () => {
+    expect(haiku.isHaiku()).toEqual(true);
+  })
+  
+});
 /*
 describe('Triangle', () => {
   let reusableTriangle;

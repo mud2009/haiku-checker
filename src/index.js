@@ -8,5 +8,3 @@ import './css/styles.css';
 $(document).ready(() => {
   console.log('Toot!');
 });
-
-// npm install --save-dev @babel/preset-env
