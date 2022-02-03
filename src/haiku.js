@@ -14,16 +14,13 @@ export default class Haiku {
   }
 
   isHaiku() {
-    if (this.isThreeLines()) {
-      const [lineOne, lineTwo, lineThree] = this.text.split('\n');
+    const [lineOne, lineTwo, lineThree] = this.text.split('\n');
 
-      if ((syllables(lineOne) === 5) &&
-          (syllables(lineTwo) === 7) &&
-          (syllables(lineThree) === 5)) {
-        return true;
-      } else {
-        return false;
-      }
+    if (this.isThreeLines() &&
+        (syllables(lineOne) === 5) &&
+        (syllables(lineTwo) === 7) &&
+        (syllables(lineThree) === 5)) {
+      return true;
     } else {
       return false;
     }

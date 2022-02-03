@@ -10,7 +10,13 @@ import Haiku from "./haiku.js";
 
 function displayIsHaiku(text){
   let haiku = new Haiku(text);
-  $('#result').text(haiku.isHaiku());
+  let out = '';
+  if (haiku.isHaiku()) {
+    out = 'This is a haiku!';
+  } else {
+    out = 'This is not a haiku, ding dong!';
+  }
+  $('#result').text(out);
 }
 
 $('form').submit(function(event){

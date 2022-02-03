@@ -1,15 +1,20 @@
-# (Application Name)
+# Haiku Checker
 
-#### (Brief Description of Application)
+#### Site that checks if an entry is a haiku
 
-#### By Will Greenberg
+#### By Josh Tillinghast, Will Greenberg, Will Watkins
 
 ## Technologies Used
 
 * HTML
 * CSS
+* Popper.js
+* Bootstrap
 * Javascript
 * jQuery
+* Jest
+* Babel
+* Syllable
 
 ## Description
 

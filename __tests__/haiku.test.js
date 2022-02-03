@@ -27,10 +27,10 @@ describe ('Haiku.isHaiku', () => {
     let haiku = new Haiku("An ocean voyage\nAs waves break over the bow\nThe sea me.\nhi ryan!");
     expect(haiku.isHaiku()).toEqual(false);
   });
-  test('it should return false if the text is not a haiku', () => {
-    let haiku = new Haiku("An ocean voyage\nAs waves break over the bow\nThe sea welcomes!");
-    expect(haiku.isHaiku()).toEqual(false);
-  })
+  // test('it should return false if the text is not a haiku', () => {
+  //   let haiku = new Haiku("An ocean voyage\nAs waves break over the bow\nThe sea welcomes!");
+  //   expect(haiku.isHaiku()).toEqual(false);
+  // })
 });
 /*
 describe('Triangle', () => {
