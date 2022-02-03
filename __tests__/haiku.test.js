@@ -1,13 +1,9 @@
 import Haiku from "../src/haiku.js"
 
-describe ('Haiku', () => {
+describe ('Haiku constructor', () => {
   test('should construct Haiku object', () => {
     let haiku = new Haiku("text");
     expect(haiku.text).toEqual("text");
-  });
-  test('should construct Haiku object with random haiku if none is passed in', () => {
-    let haiku = new Haiku("");
-    expect(haiku.text).toEqual("");
   });
 });
 
@@ -33,6 +29,10 @@ describe ('Haiku.isHaiku', () => {
   });
 });
 
-// describe ('Haiku.generateHaiku' () => {
-//   test('it should generate ')
-// })
+describe ('Haiku.generateHaiku', () => {
+  test('it should generate a random haiku', () => {
+    let haiku = new Haiku();
+    let testHaiku = new Haiku(haiku.generateHaiku());
+    expect(testHaiku.isHaiku()).toEqual(true);
+  })
+});

@@ -15,10 +15,11 @@
 * Jest
 * Babel
 * Syllable
+* Random words
 
 ## Description
 
-This site allows users to _blah blah blah fill this in_ :grin:
+This site allows users to check haikus for proper syllables and also generate haikus randomly. :grin:
 
 ## Link to site
 
@@ -40,4 +41,4 @@ This site is accessible [here](/).
 
 [MIT](https://opensource.org/licenses/MIT)
 
-Copyright (c) 2022 Will Greenberg
+Copyright (c) 2022 Josh Tillinghast, Will Greenberg, Will Watkins

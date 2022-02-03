@@ -1,12 +1,9 @@
 import syllables from 'syllable';
+import randomWords from 'random-words';
 
 export default class Haiku {
   constructor(text) {
-    if (text === '') {
-      this.text = this.generateHaiku();
-    } else {
-      this.text = text;
-    }
+    this.text = text;
   }
 
   isThreeLines() {
@@ -31,33 +28,46 @@ export default class Haiku {
   }
 
   generateHaiku() {
-    return "";
+    // let words = ['i', 'am', 'the', 'what', 'hi', 'bus', 'car', 'cat', 'dog', 'phone', 'plant', "nightmare", "devote", "quote", "talented", "ruin", "discuss", "slip", "redeem", "the", "no", "is", "crocs", "creamer", "old", "trick", "up", "sandwich", "alphabet", "death", "every", "fur", "fermentation", "chainsaw", "lunch", "ricebag", "eventually", "soda", "orange", "sugar", "beat"];
+    // function randomWord() { 
+    //   return words[Math.floor(Math.random()*words.length)];
+    // }
+    let lineOne = [];
+    let lineTwo = [];
+    let lineThree = [];
+    while (syllables(lineOne.join(' ')) !== 5) {
+      lineOne.push(randomWords());
+      if (syllables(lineOne.join(' ')) > 5) {
+        lineOne.pop();
+      }
+    }
+    while (syllables(lineTwo.join(' ')) !== 7) {
+      lineTwo.push(randomWords());
+      if (syllables(lineTwo.join(' ')) > 7) {
+        lineTwo.pop();
+      }
+    }
+    while (syllables(lineThree.join(' ')) !== 5) {
+      lineThree.push(randomWords());
+      if (syllables(lineThree.join(' ')) > 5) {
+        lineThree.pop();
+      }
+    }
+
+    // function capWord(wordArray) {
+    //   return wordArray.map((word) => {
+    //     return word[0].toUpperCase() + word.substring(1); 
+    //   });
+    // }
+
+    // console.log('Line 1: ' + lineOne.join(" ") + " " + syllables(lineOne.join(' ')));
+    // console.log('Line 2: ' + lineTwo.join(" ") + " " + syllables(lineTwo.join(' ')));
+    // console.log('Line 3: ' + lineThree.join(" ") + " " + syllables(lineThree.join(' ')));
+    // let reasonableString = lineOne.join(' ') + '<br>' + lineTwo.join(' ') + '<br>' + lineThree.join(' ');
+    // return capWord(reasonableString.split()).join(' ');
+    //console.log()
+    //return reasonableString.toUpperCase();
+    console.log([lineOne.join(' '), lineTwo.join(' '), lineThree.join(' ')].join('\n'));
+    return ([lineOne.join(' '), lineTwo.join(' '), lineThree.join(' ')].join('\n'));
   }
 }
-
-
-// if (word contains vowel)
-//   syllable counter ++
-// if (word ends in e)
-//   syllable counter -1
-// if (ends in le or les) 
-//   +1 if preceded by consonant
-
-
-// 'An ocean voyage. As waves break over the bow. The sea welcomes me.' -> split into sections -> check each section -> if all sections are true then it's a haiku
-
-// 'An ocean voyage. As waves break over the bow. The sea welcomes me.' -> pre-split -> pass each as parameter -> check each parameter -> if each is # of syllables then it's a haiku
-
-// let x = 'An ocean voyage. As waves break over the bow. The sea welcomes me.';
-
-// console.log(syllable(x));
-
-// let h = new Haiku(string from user);
-
-// 'An ocean voyage.\nAs waves break over the bow.\nThe sea welcomes me.'
-
-// "An ocean voyage.
-// As waves break...
-// "
-// \n
-// npm install babel-jest

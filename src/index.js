@@ -12,11 +12,16 @@ function displayIsHaiku(text){
   let haiku = new Haiku(text);
   let out = '';
   if (haiku.isHaiku()) {
-    out = 'This is a haiku!';
+    out = 'You\'ve got a Haiku!<br><pre>' + haiku.text + '</pre>';
   } else {
     out = 'This is not a haiku, ding dong!';
   }
-  $('#result').text(out);
+  $('#result').html(out);
+}
+
+function displayRandomHaiku() {
+  let haiku = new Haiku();
+  $('#result').html('<pre>' + haiku.generateHaiku() + '</pre>');
 }
 
 $('form').submit(function(event){
@@ -24,3 +29,5 @@ $('form').submit(function(event){
   let userInput = $("#haiku").val();
   displayIsHaiku(userInput);
 });
+
+$('#generate-haiku').on("click", displayRandomHaiku);

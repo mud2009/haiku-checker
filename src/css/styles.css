@@ -1,0 +1,9 @@
+pre {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+}
+
+body {
+  background-image: url("../assets/images/ricepaddy.jpeg");
+}
