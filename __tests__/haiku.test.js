@@ -5,6 +5,10 @@ describe ('Haiku', () => {
     let haiku = new Haiku("text");
     expect(haiku.text).toEqual("text");
   });
+  test('should construct Haiku object with random haiku if none is passed in', () => {
+    let haiku = new Haiku("");
+    expect(haiku.text).toEqual("");
+  });
 });
 
 describe ('Haiku.isThreeLines', () => {
@@ -27,21 +31,8 @@ describe ('Haiku.isHaiku', () => {
     let haiku = new Haiku("An ocean voyage\nAs waves break over the bow\nThe sea me.\nhi ryan!");
     expect(haiku.isHaiku()).toEqual(false);
   });
-  // test('it should return false if the text is not a haiku', () => {
-  //   let haiku = new Haiku("An ocean voyage\nAs waves break over the bow\nThe sea welcomes!");
-  //   expect(haiku.isHaiku()).toEqual(false);
-  // })
 });
-/*
-describe('Triangle', () => {
-  let reusableTriangle;
 
-  beforeEach(() => {
-    reusableTriangle = new Triangle(5, 5, 5);
-  });
-
-  test('should show how beforeEach() works', () => {
-    console.log(reusableTriangle);
-  });
-});
-*/
+// describe ('Haiku.generateHaiku' () => {
+//   test('it should generate ')
+// })

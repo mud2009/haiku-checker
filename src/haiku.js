@@ -2,7 +2,11 @@ import syllables from 'syllable';
 
 export default class Haiku {
   constructor(text) {
-    this.text = text;
+    if (text === '') {
+      this.text = this.generateHaiku();
+    } else {
+      this.text = text;
+    }
   }
 
   isThreeLines() {
@@ -24,6 +28,10 @@ export default class Haiku {
     } else {
       return false;
     }
+  }
+
+  generateHaiku() {
+    return "";
   }
 }
 
