@@ -1,4 +1,4 @@
-// const syllable = require('syllable');
+import syllables from 'syllable';
 
 export default class Haiku {
   constructor(text) {
@@ -14,23 +14,19 @@ export default class Haiku {
   }
 
   isHaiku() {
-    let lineArray = [];
-    let sylCounter = 0;
-    let vowels = ["a", "e", "i", "o", "u"];
-    lineArray = this.text.split("\n");
-    for (let i = 0; i<lineArray.length; i++) {
-      let wordArray = lineArray[i].split(" ");
-      for (let j = 0; j < wordArray.length; j++){
-        let letterArray = wordArray[j].split("");
-        for (let k = 0; k < letterArray.length; k++){
-          if (vowels.includes(letterArray[i])) {
-            sylCounter ++;
-          }
-        }
+    if (this.isThreeLines()) {
+      const [lineOne, lineTwo, lineThree] = this.text.split('\n');
+
+      if ((syllables(lineOne) === 5) &&
+          (syllables(lineTwo) === 7) &&
+          (syllables(lineThree) === 5)) {
+        return true;
+      } else {
+        return false;
       }
+    } else {
+      return false;
     }
-    console.log("Counter:", sylCounter);
-    return true;
   }
 }
 
