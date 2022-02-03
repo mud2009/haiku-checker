@@ -10,7 +10,6 @@ import Haiku from "./haiku.js";
 
 function displayIsHaiku(text){
   let haiku = new Haiku(text);
-  console.log(haiku.isHaiku());
   $('#result').text(haiku.isHaiku());
 }
 

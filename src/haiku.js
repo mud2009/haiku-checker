@@ -15,7 +15,21 @@ export default class Haiku {
 
   isHaiku() {
     let lineArray = [];
+    let sylCounter = 0;
+    let vowels = ["a", "e", "i", "o", "u"];
     lineArray = this.text.split("\n");
+    for (let i = 0; i<lineArray.length; i++) {
+      let wordArray = lineArray[i].split(" ");
+      for (let j = 0; j < wordArray.length; j++){
+        let letterArray = wordArray[j].split("");
+        for (let k = 0; k < letterArray.length; k++){
+          if (vowels.includes(letterArray[i])) {
+            sylCounter ++;
+          }
+        }
+      }
+    }
+    console.log("Counter:", sylCounter);
     return true;
   }
 }
