@@ -4,8 +4,18 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import {syllable} from 'syllable';
 
-$(document).ready(() => {
-  console.log('Toot!');
+import Haiku from "./haiku.js";
+// import {syllable} from 'syllable';
+
+function displayIsHaiku(text){
+  let haiku = new Haiku(text);
+  console.log(haiku.isHaiku());
+  $('#result').text(haiku.isHaiku());
+}
+
+$('form').submit(function(event){
+  event.preventDefault();
+  let userInput = $("#haiku").val();
+  displayIsHaiku(userInput);
 });

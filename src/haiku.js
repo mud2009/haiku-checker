@@ -14,9 +14,21 @@ export default class Haiku {
   }
 
   isHaiku() {
-    return "";
+    let lineArray = [];
+    lineArray = this.text.split("\n");
+    return true;
   }
 }
+
+
+// if (word contains vowel)
+//   syllable counter ++
+// if (word ends in e)
+//   syllable counter -1
+// if (ends in le or les) 
+//   +1 if preceded by consonant
+
+
 // 'An ocean voyage. As waves break over the bow. The sea welcomes me.' -> split into sections -> check each section -> if all sections are true then it's a haiku
 
 // 'An ocean voyage. As waves break over the bow. The sea welcomes me.' -> pre-split -> pass each as parameter -> check each parameter -> if each is # of syllables then it's a haiku
