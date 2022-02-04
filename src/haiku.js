@@ -28,10 +28,6 @@ export default class Haiku {
   }
 
   generateHaiku() {
-    // let words = ['i', 'am', 'the', 'what', 'hi', 'bus', 'car', 'cat', 'dog', 'phone', 'plant', "nightmare", "devote", "quote", "talented", "ruin", "discuss", "slip", "redeem", "the", "no", "is", "crocs", "creamer", "old", "trick", "up", "sandwich", "alphabet", "death", "every", "fur", "fermentation", "chainsaw", "lunch", "ricebag", "eventually", "soda", "orange", "sugar", "beat"];
-    // function randomWord() { 
-    //   return words[Math.floor(Math.random()*words.length)];
-    // }
     let lineOne = [];
     let lineTwo = [];
     let lineThree = [];
@@ -53,21 +49,6 @@ export default class Haiku {
         lineThree.pop();
       }
     }
-
-    // function capWord(wordArray) {
-    //   return wordArray.map((word) => {
-    //     return word[0].toUpperCase() + word.substring(1); 
-    //   });
-    // }
-
-    // console.log('Line 1: ' + lineOne.join(" ") + " " + syllables(lineOne.join(' ')));
-    // console.log('Line 2: ' + lineTwo.join(" ") + " " + syllables(lineTwo.join(' ')));
-    // console.log('Line 3: ' + lineThree.join(" ") + " " + syllables(lineThree.join(' ')));
-    // let reasonableString = lineOne.join(' ') + '<br>' + lineTwo.join(' ') + '<br>' + lineThree.join(' ');
-    // return capWord(reasonableString.split()).join(' ');
-    //console.log()
-    //return reasonableString.toUpperCase();
-    console.log([lineOne.join(' '), lineTwo.join(' '), lineThree.join(' ')].join('\n'));
     return ([lineOne.join(' '), lineTwo.join(' '), lineThree.join(' ')].join('\n'));
   }
 }
